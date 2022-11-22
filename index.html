@@ -71,7 +71,7 @@
 
     (async() => {
       console.log("Cargando modelo...");
-      modelo = await tf.loadLayersModel("model.json");
+      modelo = await tf.loadLayersModel("PredictGarbageByType/model.json");
       console.log("Modelo cargado");
     })();
 
@@ -142,6 +142,7 @@
         resample_single(canvas, 100, 100, otrocanvas);
 
         //Hacer la predicción
+       
         var ctx2 = otrocanvas.getContext("2d");
         var imgData = ctx2.getImageData(0,0, 100, 100);
 
