@@ -186,51 +186,51 @@ min.js"></script>
     }
 
     function modeloDenso() {
-      (async () => {
-        console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("denso/modelDenso.json");
+     
+        console.log("Cargando modelo denso...");
+        modelo =  tf.loadLayersModel("denso/modelDenso.json");
         console.log("Modelo cargado");
-      })();
+      
     }
 
     function modeloCNN() {
-      (async () => {
-        console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("cnn/modelCNN.json");
+     
+        console.log("Cargando modelo cnn...");
+        modelo = tf.loadLayersModel("cnn/modelCNN.json");
         console.log("Modelo cargado");
-      })();
+    
     }
 
     function modeloCNN2() {
-      (async () => {
-        console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("cnn2/modelCNN2.json");
+    
+        console.log("Cargando modelo cnn2...");
+        modelo =  tf.loadLayersModel("cnn2/modelCNN2.json");
         console.log("Modelo cargado");
-      })();
+    
     }
 
     function modeloDensoAD() {
-      (async () => {
-        console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("densoAD/modelDensoAD.json");
+    
+        console.log("Cargando modelo densoAD...");
+        modelo =  tf.loadLayersModel("densoAD/modelDensoAD.json");
         console.log("Modelo cargado");
-      })();
+   
     }
 
     function modeloCNNAD() {
-      (async () => {
-        console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("cnnAD/modelCNNAD.json");
+     
+        console.log("Cargando modelo cnnAD...");
+        modelo =  tf.loadLayersModel("cnnAD/modelCNNAD.json");
         console.log("Modelo cargado");
-      })();
+    
     }
 
     function modeloCNN2AD() {
-      (async () => {
-        console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("cnn2AD/modelCNN2AD.json");
+      
+        console.log("Cargando modelo cnn2AD...");
+        modelo =  tf.loadLayersModel("cnn2AD/modelCNN2AD.json");
         console.log("Modelo cargado");
-      })();
+    
     }
 
     function predecir() {
