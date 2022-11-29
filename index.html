@@ -66,11 +66,11 @@ min.js"></script>
             <button class="btn btn-primary mb-2" id="modeloCNN" onclick="modeloCNN();">Convolucional simple</button>
             <button class="btn btn-primary mb-2" id="modeloCNN2" onclick="modeloCNN2();">Convolucional con
               DropOut</button>
-            <button class="btn btn-primary mb-2" id="modeloCNN" onclick="modeloCNN();">Multicapa con aumento de
+            <button class="btn btn-primary mb-2" id="modeloDensoAD" onclick="modeloDensoAD();">Multicapa con aumento de
               datos</button>
-            <button class="btn btn-primary mb-2" id="modeloCNN" onclick="modeloCNN();">Convolucional con aumento de
+            <button class="btn btn-primary mb-2" id="modeloCNNAD" onclick="modeloCNNAD();">Convolucional con aumento de
               datos</button>
-            <button class="btn btn-primary mb-2" id="modeloCNN2" onclick="modeloCNN2();">Convolucional con DropOut y
+            <button class="btn btn-primary mb-2" id="modeloCNN2AD" onclick="modeloCNN2AD();">Convolucional con DropOut y
               aumento de datos</button>
 
 
@@ -119,7 +119,7 @@ min.js"></script>
 
     (async () => {
       console.log("Cargando modelo...");
-      modelo = await tf.loadLayersModel("model.json");
+      modelo = await tf.loadLayersModel("modelDenso.json");
       console.log("Modelo cargado");
     })();
 
@@ -188,7 +188,47 @@ min.js"></script>
     function modeloDenso() {
       (async () => {
         console.log("Cargando modelo...");
-        modelo = await tf.loadLayersModel("model.json");
+        modelo = await tf.loadLayersModel("denso/modelDenso.json");
+        console.log("Modelo cargado");
+      })();
+    }
+
+    function modeloCNN() {
+      (async () => {
+        console.log("Cargando modelo...");
+        modelo = await tf.loadLayersModel("cnn/modelCNN.json");
+        console.log("Modelo cargado");
+      })();
+    }
+
+    function modeloCNN2() {
+      (async () => {
+        console.log("Cargando modelo...");
+        modelo = await tf.loadLayersModel("cnn2/modelCNN2.json");
+        console.log("Modelo cargado");
+      })();
+    }
+
+    function modeloDensoAD() {
+      (async () => {
+        console.log("Cargando modelo...");
+        modelo = await tf.loadLayersModel("densoAD/modelDensoAD.json");
+        console.log("Modelo cargado");
+      })();
+    }
+
+    function modeloCNNAD() {
+      (async () => {
+        console.log("Cargando modelo...");
+        modelo = await tf.loadLayersModel("cnnAD/modelCNNAD.json");
+        console.log("Modelo cargado");
+      })();
+    }
+
+    function modeloCNN2AD() {
+      (async () => {
+        console.log("Cargando modelo...");
+        modelo = await tf.loadLayersModel("cnn2AD/modelCNN2AD.json");
         console.log("Modelo cargado");
       })();
     }
